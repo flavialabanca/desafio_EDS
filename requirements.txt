@@ -1,0 +1,8 @@
+apache-airflow
+apache-airflow-providers-postgres
+apache-airflow-providers-oracle
+psycopg2-binary
+cx_Oracle
+pandas
+SQLAlchemy
+
