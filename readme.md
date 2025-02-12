@@ -51,7 +51,22 @@ airflow scheduler &
 Acesse o Airflow via [http://localhost:8080](http://localhost:8080).
 
 
-### 5. Executar o pipeline
+### 5. Criar tabela e carregar dados de teste
+Para criar a tabela no Oracle e carregar uma massa de testes, execute o seguinte comando:
+```bash
+sqlplus usuario/senha@host:porta/banco @createTableOracle.sql
+```
+Esse comando cria a estrutura necessária para a extração dos dados.
+Esse script cria a estrutura necessária para a extração dos dados.
+
+
+### 6. Criar tabela no PostgreSQL
+Antes de rodar o pipeline, execute o seguinte comando para criar a tabela no PostgreSQL:
+```bash
+psql -U NOME_USUÁRIO -d NOME_BANCO -f createTablePostgre.sql
+```
+
+### 7. Executar o pipeline
 Após configurar as conexões, ative e execute a DAG no Airflow.
 
 ## Estrutura do Projeto
